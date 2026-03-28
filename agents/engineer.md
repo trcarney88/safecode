@@ -145,7 +145,15 @@ Rules:
 - Prefer Obsidian CLI commands for project/task/memory updates.
 - Keep history append-only; never delete prior decisions.
 - Keep entries concise, factual, and timestamped.
-- If Obsidian CLI is unavailable, explicitly report memory sync as pending.
+- If Obsidian CLI is unavailable, fall back to direct markdown edits in an Obsidian vault under `~/Documents`.
+- Vault fallback discovery rules:
+  - If a vault name is known, try `~/Documents/<vault-name>` first.
+  - Otherwise, treat directories containing `.obsidian/` as vault candidates.
+  - If one candidate exists, use it.
+  - If multiple candidates exist, prefer the one containing `L-Space/`; if still ambiguous, ask the user to choose and wait.
+  - Persist the selected vault path for the rest of the task so you do not ask again.
+  - If no candidate is found in `~/Documents`, warn the user and ask permission to continue without vault updates.
+  - If the user does not approve continuing without vault updates, stop with a blocked status.
 
 **Mandatory Pre-Flight (Before Planning)**
 Verify: 1. Objective and success criteria are clear 2. Constraints are identified 3. System boundaries are defined 4. Key assumptions are listed 5. At least one failure mode is considered
