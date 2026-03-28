@@ -60,7 +60,7 @@ and then run the `opencode` commands you need to.
 ```bash
 docker run -it \
   -v /path/to/your/project:/home/clanker-1/work \
-  -v /path/to/your/vault:/home/clanker-1/vault \
+  -v /path/to/your/vault:/home/clanker-1/Documents/vault-name \
   -v /.local/share/opencode:/home/clanker-1/.local/share/opencode \
   safecode
 ```

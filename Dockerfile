@@ -24,7 +24,8 @@ RUN mkdir -p \
     /home/clanker-1/.local/share/opencode \
     /home/clanker-1/.local/state \
     /home/clanker-1/work \
-    && chown -R clanker-1:clanker-1 /home/clanker-1
+    /home/clanker-1/Documents \
+  && chown -R clanker-1:clanker-1 /home/clanker-1
 
 USER clanker-1
 
