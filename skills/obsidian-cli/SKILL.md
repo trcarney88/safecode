@@ -189,3 +189,4 @@ Which vault should I use for updates?
 
 - Do not continue task execution that depends on vault writes until the user chooses a vault.
 - After selection, use the chosen vault path for all remaining updates in this task.
+- Persist the chosen vault path in task memory/session context so you do not ask again during the same task.
