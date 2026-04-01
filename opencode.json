@@ -1,6 +1,17 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "Engineer",
+  "permission": {
+    "read": {
+      "~/Documents/*": "allow"
+    },
+    "write": {
+      "~/Documents/*": "allow"
+    },
+    "edit": {
+      "~/Documents/*": "allow"
+    }
+  },
   "mcp": {
     "context7": {
       "type": "remote",
